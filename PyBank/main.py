@@ -41,4 +41,11 @@ with open(path,newline="") as csvfile:
 	print("Greatest Increase", greatestincrease)
 	print("Greatest Decrease", greatestdecrease )
 
+	results = open("results.txt",'w')
 
+	results.write("Financial Analysis"+ "\n-------------------------")
+	results.write("\nTotal months:"+ str(month_count))
+	results.write("\nTotal Profit/Loss:"+ str(profit))
+	results.write("\nAverage Change:"+ str(round(average_change)))
+	results.write("\nGreatest Increase "+ str(greatestincrease))
+	results.write("\nGreatest Decrease "+ str(greatestdecrease))
